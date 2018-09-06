@@ -44,7 +44,8 @@ export default class App extends Component{
     target=this.randomNumbers
         .slice(0,this.props.randomNumberCount-2)
         .reduce((acc,curr)=>acc+curr);
-        shuffledRandomNumbers=shuffle(this.randomNumbers);
+        
+    shuffledRandomNumbers=shuffle(this.randomNumbers);
 
     componentWillUpdate(nextProps,nextState){
         if(nextState.selectedIds!==this.state.selectedIds || nextState.remainingSeconds===0)
